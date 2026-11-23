@@ -1,0 +1,164 @@
+/* ==========================================================================
+   WeCode theme overrides on top of the Agntix template (main.css).
+   Brand: navy #0E1726 · blue #2563EB · light blue #60A5FA
+   Keep all brand changes in this file so main.css stays untouched.
+   ========================================================================== */
+:root {
+  --wc-bg: #0A1222;          /* page background */
+  --wc-band: #0F2547;        /* deep-blue bands (was template teal) */
+  --wc-surface: #111C33;     /* cards / boxes */
+  --wc-blue: #2563EB;
+  --wc-blue-light: #60A5FA;
+  --wc-blue-pale: #BFDBFE;
+  --wc-text-muted: #94A3B8;
+  --tp-common-paste-2: var(--wc-band);
+  --tp-common-blue: var(--wc-blue-light);
+}
+
+.agntix-dark body { background-color: var(--wc-bg); }
+
+/* ---------- logo ---------- */
+.wc-logo { display: inline-flex; align-items: center; gap: 10px; color: #fff; }
+.wc-logo-text { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 26px; letter-spacing: -0.5px; line-height: 1; color: #fff; }
+.tp-offcanvas-logo .wc-logo-text { font-size: 22px; }
+
+/* ---------- header ---------- */
+.tp-header-10-menu nav ul li.wc-active > a { color: var(--wc-blue-light); }
+.tp-header-11-style.header-11-dark-style .tp-btn-black-radius { background-color: var(--wc-blue); color: #fff; }
+.tp-header-11-style.header-11-dark-style .tp-btn-black-radius i { background-color: #fff; color: var(--wc-blue); }
+.sticky-black-bg.header-sticky { background-color: rgba(10, 18, 34, 0.85); }
+
+/* ---------- buttons ---------- */
+.tp-btn-black-radius.btn-blue-bg { background-color: var(--wc-blue-light); color: #0E1726; }
+.tp-btn-black-radius.btn-blue-bg i { background-color: #fff; }
+.agntix-dark .tp-btn-black-radius.btn-blue-bg.btn-border { background-color: transparent; color: #fff; }
+.agntix-dark .tp-btn-black-radius.btn-blue-bg.btn-border i { background-color: var(--wc-blue); }
+
+/* ---------- section backgrounds (template teal -> brand blue) ---------- */
+.it-footer-style.crp-footer-bg { background-color: var(--wc-band); }
+.it-about-info-item { background: #DBEAFE; }
+.it-about-info-item.wc-info-2 { background: var(--wc-blue-pale); }
+.it-hero-subtitle { color: var(--wc-blue-light) !important; }
+.wc-rounded { border-radius: 24px; }
+
+/* ---------- technology strip (text instead of client logos) ---------- */
+.wc-tech {
+  font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 26px;
+  color: rgba(255, 255, 255, 0.75); white-space: nowrap; letter-spacing: -0.3px;
+}
+
+/* ---------- ticker ---------- */
+.tp-brand-area.it-brand-style .tp-brand-title { color: #0E1726; }
+
+/* ---------- numbers band (replaces the comparison logos) ---------- */
+.wc-numbers .it-comparison-item { padding: 50px 30px; }
+.wc-number {
+  font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 72px; line-height: 1;
+  color: var(--wc-blue-light); margin-bottom: 14px;
+}
+.wc-numbers .it-comparison-content span { color: rgba(255, 255, 255, 0.7); font-size: 17px; }
+
+/* ---------- benefits ---------- */
+.it-benifit-icon span { color: var(--wc-blue-light); }
+
+/* ---------- inner page hero ---------- */
+.wc-page-hero .it-hero-shape-1 svg path { fill: var(--wc-bg); }
+.wc-page-hero-content { padding-top: 220px; padding-bottom: 170px; position: relative; z-index: 2; }
+.wc-page-title { font-size: 84px; }
+.wc-page-hero-content p { max-width: 720px; font-size: 19px; }
+.wc-crumbs { margin-bottom: 24px; font-size: 15px; color: var(--wc-text-muted); display: flex; gap: 10px; flex-wrap: wrap; }
+.wc-crumbs a { color: var(--wc-text-muted); }
+.wc-crumbs a:hover { color: #fff; }
+@media (max-width: 991px) {
+  .wc-page-title { font-size: 56px; }
+  .wc-page-hero-content { padding-top: 160px; padding-bottom: 120px; }
+}
+@media (max-width: 575px) {
+  .wc-page-title { font-size: 40px; }
+}
+
+/* ---------- section titles in inner pages ---------- */
+.wc-eyebrow { display: inline-block; font-size: 14px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--wc-blue-light); margin-bottom: 16px; }
+.wc-h2 { font-family: var(--tp-ff-platform); font-weight: 700; font-size: 56px; line-height: 1.1; color: #fff; margin-bottom: 20px; }
+.wc-lead { font-size: 19px; line-height: 1.6; color: rgba(255, 255, 255, 0.7); }
+@media (max-width: 767px) { .wc-h2 { font-size: 38px; } }
+
+/* ---------- project cards ---------- */
+.wc-project-card .tp-portfolio-inner-thumb img { border-radius: 18px; width: 100%; }
+.wc-project-card .tp-portfolio-inner-content { padding-top: 24px; }
+.wc-card-cat { display: block; font-size: 14px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--wc-blue-light) !important; margin-bottom: 8px; }
+.wc-card-cat em { font-style: normal; color: #FCD34D; }
+.wc-card-text { color: rgba(255, 255, 255, 0.7); font-size: 16px; line-height: 1.6; margin: 10px 0 12px; max-width: 560px; }
+.wc-filter { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 50px; }
+.wc-filter button {
+  font-size: 15px; font-weight: 500; color: #fff; background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.18); border-radius: 999px; padding: 10px 20px; min-height: 44px;
+  transition: all .2s;
+}
+.wc-filter button:hover { border-color: var(--wc-blue-light); }
+.wc-filter button.active { background: var(--wc-blue-light); border-color: var(--wc-blue-light); color: #0E1726; }
+.wc-project-col.is-hidden { display: none; }
+
+/* ---------- project detail ---------- */
+.wc-pd-meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; border-top: 1px solid rgba(255,255,255,.1); padding-top: 30px; }
+.wc-pd-meta span { display: block; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: var(--wc-text-muted); margin-bottom: 6px; }
+.wc-pd-meta h6 { color: #fff; font-size: 18px; font-weight: 500; line-height: 1.4; margin: 0; }
+.wc-pd-banner img { width: 100%; border-radius: 24px; }
+.wc-solution-item { background: var(--wc-surface); border: 1px solid rgba(255,255,255,.06); border-radius: 16px; padding: 30px; height: 100%; }
+.wc-solution-item h4 { color: #fff; font-size: 21px; margin-bottom: 10px; }
+.wc-solution-item p { color: rgba(255,255,255,.7); margin: 0; font-size: 16px; line-height: 1.6; }
+.wc-stack { display: flex; flex-wrap: wrap; gap: 10px; }
+.wc-stack span { font-size: 15px; color: #fff; border: 1px solid rgba(255,255,255,.15); border-radius: 999px; padding: 6px 16px; }
+.tp-pd-1-work-item-title span { color: var(--wc-blue-light); }
+
+/* ---------- services page ---------- */
+.inner-service-1-left li a { color: inherit; }
+.inner-service-1-number h2 { font-family: var(--tp-ff-platform); font-weight: 700; font-size: 200px; line-height: 1; color: var(--wc-blue-light); }
+.wc-service-item { scroll-margin-top: 140px; }
+.inner-service-1-thumb img { border-radius: 16px; }
+
+/* ---------- generic cards / boxes ---------- */
+.wc-box { background: var(--wc-surface); border: 1px solid rgba(255,255,255,.06); border-radius: 20px; padding: 40px; height: 100%; }
+.wc-box h3, .wc-box h4 { color: #fff; }
+.wc-box p { color: rgba(255,255,255,.7); }
+.wc-chip-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+.wc-chip-grid div { background: var(--wc-surface); border: 1px solid rgba(255,255,255,.08); border-radius: 14px; padding: 22px; color: #fff; font-weight: 600; font-size: 17px; }
+.wc-chip-grid div small { display: block; font-weight: 400; color: rgba(255,255,255,.6); font-size: 15px; margin-top: 6px; line-height: 1.5; }
+.wc-badge { display: inline-block; font-size: 13px; font-weight: 600; background: #FEF3C7; color: #92400E; border-radius: 999px; padding: 4px 12px; vertical-align: middle; }
+
+/* ---------- contact ---------- */
+.wc-contact-info a, .wc-contact-info p { color: #fff; font-size: 18px; }
+.wc-contact-info span { display: block; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: var(--wc-text-muted); margin-bottom: 6px; }
+.wc-form-status { margin-top: 14px; font-size: 16px; }
+.wc-form-status.success { color: #4ADE80; }
+.wc-form-status.error { color: #F87171; }
+.tp-contact-us-map iframe { border-radius: 20px; filter: grayscale(.4) invert(.9) hue-rotate(180deg); }
+.tp-contact-form-btn button { background-color: var(--wc-blue); color: #fff; }
+.tp-contact-form-input input, .tp-contact-form-input textarea { color: #fff; }
+
+/* ---------- cards: template grey -> navy surface ---------- */
+.agntix-dark .it-feature-item::before { background: var(--wc-surface); }
+.agntix-dark .it-project-item { background: var(--wc-surface); }
+.agntix-dark .ai-faq-accordion-wrap .accordion-items { background: var(--wc-surface); }
+.it-feature-item.wc-cta-card { background: linear-gradient(160deg, #2563EB 0%, #1E3A8A 100%); border-radius: 16px; }
+.it-feature-item.wc-cta-card::before { display: none; }
+.it-feature-item.wc-cta-card .it-feature-title { color: #fff; }
+
+/* ---------- footer ---------- */
+.it-footer-style .crp-footer-big-text { background-color: var(--wc-blue); }
+.agntix-dark .app-faq-wrap .ai-faq-accordion-wrap .accordion { background: var(--wc-surface); }
+
+/* ---------- CTA band & related links ---------- */
+.wc-cta-band { background: linear-gradient(135deg, #12306A 0%, #0F2547 60%, #111C33 100%); }
+.wc-related-title { color: #fff; font-weight: 500; font-size: 17px; }
+.wc-related-title:hover { color: var(--wc-blue-light); }
+.inner-service-1-category-item { cursor: default; }
+.inner-service-1-left ul li span { color: var(--wc-blue-light); }
+.inner-service-1-left ul li a:hover span { color: #fff; }
+
+/* ---------- small screens ---------- */
+@media (max-width: 767px) {
+  .it-hero-title br { display: none; }
+  .wc-number { font-size: 56px; }
+  .wc-tech { font-size: 20px; }
+}
